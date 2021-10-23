@@ -2,23 +2,39 @@
   include('cabecalho.html');
   include('dados.php');
 ?>
-  <main>
+  <main class="container">
       <h2>Lista dos Cursos</h2>
-      <table>
+      <table class="table table-striped">
           <thead>
               <th>Id</th>
               <th>Nome</th>
               <th>Semestres</th>
+              <th>coordenador</th>
           </thead>
+          
           <tbody>
               <!-- Aqui vão as linhas com os dados -->
-
               <?php
-                 $cursos = getCursos();
-                 print_r($cursos);
-              ?>
+                $cursos = getCursos();
+                foreach($cursos as $curso){
+                    echo ("<tr>
+                            <td>".$curso['id']."</td>
+                            <td>".$curso['nome']."</td>
+                            <td>".$curso['semestres']."</td>");
+                    //pega o id do coordenador do curso
+                    $idCoord = $curso['coordenador'];
+                    //busca os dados do professor e armazena em $coordenador (retorna um array)
+                    $coordenador = getProfessor($idCoord);
+                    //exibe o nome do coordenador na coluna da tabela
+                    echo (" <td>".$coordenador['nome']."</td>
+                           </tr>");
+                }
 
+              ?>
           </tbody>
+          
+
+
       </table>
   </main>
 <?php

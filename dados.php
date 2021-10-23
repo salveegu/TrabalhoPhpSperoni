@@ -32,6 +32,21 @@ $cursos = array(
         "nome" => "Bacharelado em Agronomia",
         "semestres" => 8,
         "coordenador" => 6
+    ),
+    
+    array(
+        "id" => 5,
+        "nome" => "Desenvolvimento de Jogos",
+        "semestres" => 8,
+        "coordenador" => 6
+    ),
+
+    array(
+
+        "id" =>6,
+        "nome"=> "Segurança da informação",
+        "semestres" =>5,
+        "coordenador" =>1
     )
 );
 
@@ -153,3 +168,18 @@ function getCursos(){
     global $cursos; //a funcao passa a "conhecer" a variavel definida fora
     return $cursos;
 }
+
+//recebe um id, e retorna um Array com os dados do professor correspondente
+function getProfessor($id){
+    //usa a variável $professores (que é global)
+    global $professores;
+    //percorre o array
+    foreach($professores as $professor){
+        //testa se o valor contido na posição id é o mesmo passado por parâmetro
+        if($professor['id'] == $id){
+            //se for, retorna o Array $professor (que contem id e nome do professor)
+            return $professor;
+        }
+    }
+}
+
