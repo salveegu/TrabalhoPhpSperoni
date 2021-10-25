@@ -1,11 +1,11 @@
 <?php
 $professores = array(
-    array("id" => 1, "nome" => "André Moraes"),
-    array("id" => 2, "nome" => "Ângelo Frozza"),
-    array("id" => 3, "nome" => "Daniel Anderle"),
-    array("id" => 4, "nome" => "Daniel Varela"),
-    array("id" => 5, "nome" => "Rafael Speroni"),
-    array("id" => 6, "nome" => "Lidiane Visintin")
+    array("id" => 1, "nome" => "André Moraes", "email" =>"andreMoraes@gmail.com", "tel" => "1111-1111"),
+    array("id" => 2, "nome" => "Ângelo Frozza", "email" =>"angeloFrozza@gmail.com", "tel" => "2222-2222"),
+    array("id" => 3, "nome" => "Daniel Anderle","email" =>"danielAnderle@gmail.com", "tel" => "3333-3333"),
+    array("id" => 4, "nome" => "Daniel Varela", "email" =>"danielVarela@gmail.com", "tel" => "4444-4444"),
+    array("id" => 5, "nome" => "Rafael Speroni", "email" =>"rafaelSperoni@gmail.com", "tel" => "5555-5555"),
+    array("id" => 6, "nome" => "Lidiane Visintin", "email" =>"lidianeVisintin@gmail.com", "tel" => "6666-6666")
 );
 
 $cursos = array(

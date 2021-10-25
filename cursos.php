@@ -26,8 +26,8 @@
                     //busca os dados do professor e armazena em $coordenador (retorna um array)
                     $coordenador = getProfessor($idCoord);
                     //exibe o nome do coordenador na coluna da tabela
-                    echo (" <td>".$coordenador['nome']."</td>
-                           </tr>");
+                    echo (" <td><a href='professor.php?id=".$coordenador['id']."'>".$coordenador['nome']."</a></td>
+                    </tr>");
                 }
 
               ?>
