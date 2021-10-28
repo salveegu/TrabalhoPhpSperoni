@@ -183,3 +183,16 @@ function getProfessor($id){
     }
 }
 
+//recebe um id, e retorna um Array com os dados do professor correspondente
+function getCurso($id){
+    //usa a variável $professores (que é global)
+    global $cursos;
+    //percorre o array
+    foreach($cursos as $curso){
+        //testa se o valor contido na posição id é o mesmo passado por parâmetro
+        if($curso['id'] == $id){
+            //se for, retorna o Array $professor (que contem id e nome do professor)
+            return $curso;
+        }
+    }
+}
