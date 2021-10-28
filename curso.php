@@ -4,6 +4,7 @@ include ('dados.php');
 ?>
 <main class="container">
     <h2>Curso</h2>
+    <br>
     <?php
     //exibe o conteúdo do Array $_GET
    // print_r($_GET);
@@ -20,6 +21,8 @@ include ('dados.php');
     echo ('<dl>
     <dt>'.$curso['nome'].'</dt>
     <dd>Este é o id do curso ='.$curso['id'].'</dd>
+    <dd>Quantidade de semestres do curso ='.$curso['semestres'].'</dd>
+    <dd>Este é o ID do coordenador do curso ='.$curso['coordenador'].'</dd>
   </dl>');
 
 ?>
