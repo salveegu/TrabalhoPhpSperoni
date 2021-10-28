@@ -19,7 +19,9 @@
                 foreach($cursos as $curso){
                     echo ("<tr>
                             <td>".$curso['id']."</td>
-                            <td>".$curso['nome']."</td>
+
+                            <td><a href ='curso.php?id=".$curso['id']."'>".$curso['nome']."</a></td>
+
                             <td>".$curso['semestres']."</td>");
                     //pega o id do coordenador do curso
                     $idCoord = $curso['coordenador'];

@@ -6,7 +6,7 @@ include ('dados.php');
     <h2>Curso</h2>
     <?php
     //exibe o conteúdo do Array $_GET
-    print_r($_GET);
+   // print_r($_GET);
     //recuperamos o valor da posição id
 
     $id = $_GET['id'];
@@ -14,8 +14,14 @@ include ('dados.php');
     //buscamos os dados do professor com aquele id
 
     $curso = getCurso($id);
-    //exibindo o conteúdo do array $professor
-    print_r($curso);
+    //exibindo o conteúdo do array $curso
+    //print_r($curso);
+
+    echo ('<dl>
+    <dt>'.$curso['nome'].'</dt>
+    <dd>Este é o id do curso ='.$curso['id'].'</dd>
+  </dl>');
+
 ?>
 </main>
 
